@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation</title>
+</head>
+
+	<!-- animation-name: 动画名称 -->
+	<!-- animation-duration: 持续时间 -->
+	<!-- animation-timing-function:速度曲线 默认ease 可选 ease-in ease-out ease-in-out linear cubic-bezier(n,n,n,n) -->
+	<!-- animation-delay:动画延迟 -->
+	<!-- animation-iteration-count: 动画播放次数 num | infinite -->
+	<!-- animation-play-status:动画播放状态 paused | running -->
+	<!-- animation-fill-mode:动画播放之前/之后，效果是否可见 none|forwards|backwards|both -->
+
+<style type="text/css">
+	body
+	{
+		margin: 0;
+		padding: 0;
+		background: #031321;
+		min-height: 100vh;
+		color: #fff;
+	}
+	.animation
+	{
+		width: 100px;
+		height: 40px;
+		background: #fff;
+		transition: width 5s;
+	}
+	.animation:hover
+	{
+		/* animation-name: animation;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite; */
+		
+	}
+	@keyframes animation
+	{
+		0%
+		{
+			width: 100px;
+			background: #fff;
+		}
+		25%
+		{
+			width: 150px;
+			background: red;
+		}
+		50%
+		{
+			width: 200px;
+			background: blue;
+		}
+		75%
+		{
+			width: 150px;
+			background: red;
+		}
+		100%
+		{
+			width: 100px;
+			background: #fff;
+		}
+	}
+</style>
+<body>
+
+	<div class="animation"></div>
+
+</body>
+</html>

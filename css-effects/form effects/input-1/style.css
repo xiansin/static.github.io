@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: 'Source Serif Pro', serif;
+}
+body
+{
+	background: #111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+	
+
+.container h2
+{
+	font-size: 22px;
+	color: #ddd;
+	margin-bottom: 45px;
+}
+
+.input-field
+{
+	height: 40px;
+	position: relative;
+	
+}
+
+.input-field input[type=text]
+{
+	border: none;
+	width: 100%;
+	position: absolute;
+	background: transparent;
+	color: #fff;
+	font-size: 22px;
+}
+
+.input-field label
+{
+	color: #777;
+	font-size: 22px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	display: block;
+	transition: .5s;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=text]:valid + label
+{
+	transform: translateY(-35px);
+	background: #ff006a;
+	color: #fff;
+	font-size: 14px;
+	padding: 2px 6px;
+}
+
+.input-field span
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #ccc;
+}
+.input-field span:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: #00b0ff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .5s ease-in-out;
+}
+
+.input-field  input[type=text]:focus ~ span:after,
+.input-field  input[type=text]:valid ~ span:after
+{
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform .5s ease-in-out;
+}
+
+.btn
+{
+	margin-top: 20px;
+	padding: 5px 10px;
+	cursor: pointer;
+	background: #555;
+	border: 1px solid #555;
+	color: #fff;
+}
+.btn:hover
+{
+	border: 1px solid #00b0ff;
+	background: #00b0ff;
+}

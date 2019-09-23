@@ -1,0 +1,67 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+section
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+.btn
+{
+	position: relative;
+	display: block;
+	border: 1px solid #0099FF;
+	padding: 10px 20px;
+	margin: 0 15px;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.btn1:after,.btn2:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 105%;
+	height: 105%;
+	background: #0099FF;
+	z-index: -1;
+	transition: .5s;
+}
+.btn1:after
+{
+	transform: scale(0);
+}
+.btn1:hover
+{
+	color: #fff;
+}
+.btn1:hover:after
+{
+	transform: scale(1);
+}
+
+.btn2:after
+{
+	transform: scale(1);
+}
+.btn2:hover
+{
+	color: #0099FF;
+}
+.btn2:hover:after
+{
+	transform: scale(0);
+}
